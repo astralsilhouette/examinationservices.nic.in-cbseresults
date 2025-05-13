@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CBSE Results 2025</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="login-box">
+    <img src="https://cbseresults.nic.in/images/cbse-logo.png" class="logo" alt="CBSE Logo">
+    <h2>Senior School Certificate Examination (Class X) Results 2025</h2>
+    <form onsubmit="return checkResult()">
+      <label for="roll">Enter your Roll Number</label>
+      <input type="text" id="roll" required>
+
+      <label for="dob">Enter your Date of Birth</label>
+      <input type="date" id="dob" required>
+
+      <label for="name">Enter your Name</label>
+      <input type="text" id="name" required>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <script>
+    function checkResult() {
+      const roll = document.getElementById('roll').value.trim();
+      const dob = document.getElementById('dob').value.trim();
+      const name = document.getElementById('name').value.trim().toLowerCase();
+
+      if (roll === "2117562" && dob === "2009-06-27" && name === "mansi pareek") {
+        window.location.href = "result.html";
+        return false;
+      } else {
+        alert("Either Roll No, DOB, or Name is incorrect.");
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>
